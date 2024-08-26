@@ -1,0 +1,32 @@
+Basic Docker Commands for Managing Containers
+
+docker run
+
+Usage: Create and start a new container from an image.
+Example: docker run -d -p 80:80 --name webserver nginx
+Explanation: This command runs a new container in detached mode (-d), maps port 80 of the container to port 80 on the host (-p 80:80), names the container webserver, and uses the nginx image.
+docker ps
+
+Usage: List all running containers.
+Example: docker ps
+Explanation: Displays information about currently running containers, including container ID, names, and ports.
+docker stop
+
+Usage: Stop a running container.
+Example: docker stop webserver
+Explanation: Stops the container named webserver. You can also use the container ID instead of the name.
+docker rm
+
+Usage: Remove a stopped container.
+Example: docker rm webserver
+Explanation: Removes the container named webserver. The container must be stopped before it can be removed.
+docker images (or docker image ls)
+
+Usage: List all Docker images on the local system.
+Example: docker images
+Explanation: Displays a list of all images, including their repository, tag, and image ID.
+docker rmi
+
+Usage: Remove a Docker image.
+Example: docker rmi nginx
+Explanation: Removes the Docker image named nginx. The image must not be used by any containers (stopped or running) before it can be removed.
