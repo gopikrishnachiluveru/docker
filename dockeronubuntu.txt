@@ -1,0 +1,23 @@
+DOCKER FOR UBUNTU
+------------------
+To check version of UBUNTU
+: lsb_release -a
+  
+Next update packages to get access to latest packages
+: sudo apt-get update
+  
+Install docker engine
+: sudo apt install docker.io
+
+Enable docker service, this makes docker start automatically
+: sudo systemctl enable docker
+
+To check docker is running
+:sudo systemctl status docker
+
+If docker is not running , run below cmd
+: sudo systemctl start docker
+
+Finally test docker service by spinning up a container
+: sudo docker run hello-world
+
